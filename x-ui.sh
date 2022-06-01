@@ -275,13 +275,13 @@ migrate_v2_ui() {
 }
 
 acme() {
-   bash <(curl -sSL https://raw.githubusercontent.com/kkkyg/acme-script/master/acme.sh)
+   bash <(curl -sSL https://raw.githubusercontent.com/pandafile/acme-script/master/acme.sh)
     echo ""
     before_show_menu
 }
 
 bbr() {
-bash <(curl -L -s https://raw.githubusercontent.com/kkkyg/across/master/bbr.sh)
+bash <(curl -L -s https://raw.githubusercontent.com/pandafile/across/master/bbr.sh)
     echo ""
     before_show_menu
 }
