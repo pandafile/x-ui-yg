@@ -437,10 +437,10 @@ show_menu() {
  ${green}15.${plain} 一键BBR+FQ加速
  "
     show_status
-    echo && read -p "请输入选择 [0-14]: " num
+    echo && read -p "请输入选择 [0-15]: " num
 
     case "${num}" in
-        0) exit 0
+               0) exit 0
         ;;
         1) check_uninstall && install
         ;;
@@ -454,25 +454,27 @@ show_menu() {
         ;;
         6) check_install && set_port
         ;;
-        7) check_install && start
+        7) check_install && check_config
         ;;
-        8) check_install && stop
+        8) check_install && start
         ;;
-        9) check_install && restart
+        9) check_install && stop
         ;;
-        10) check_install && status
+        10) check_install && restart
         ;;
-        11) check_install && show_log
+        11) check_install && status
         ;;
-        12) check_install && enable
+        12) check_install && show_log
         ;;
-        13) check_install && disable
+        13) check_install && enable
         ;;
-        14) acme
+        14) check_install && disable
         ;;
-        15) bbr
+        15) acme
         ;;
-        *) echo -e "${red}请输入正确的数字 [0-14]${plain}"
+        16) bbr
+        ;;
+        *) echo -e "${red}请输入正确的数字 [0-15]${plain}"
         ;;
     esac
 }
