@@ -82,7 +82,7 @@ before_show_menu() {
 }
 
 install() {
-    bash <(curl -Ls https://raw.githubusercontent.com/kkkyg/x-ui-yg/master/install.sh)
+    bash <(curl -Ls https://raw.githubusercontent.com/pandafile/x-ui-yg/master/install.sh)
     if [[ $? == 0 ]]; then
         if [[ $# == 0 ]]; then
             start
@@ -412,7 +412,7 @@ show_usage() {
 }
 
 show_menu() {
-    echo -e "
+   echo -e "
   ${green}x-ui 面板管理脚本${plain}
   ${green}0.${plain} 退出脚本
 ————————————————
@@ -423,21 +423,22 @@ show_menu() {
   ${green}4.${plain} 重置用户名密码
   ${green}5.${plain} 重置面板设置
   ${green}6.${plain} 设置面板端口
+  ${green}7.${plain} 当前面板设置
 ————————————————
-  ${green}7.${plain} 启动 x-ui
-  ${green}8.${plain} 停止 x-ui
-  ${green}9.${plain} 重启 x-ui
- ${green}10.${plain} 查看 x-ui 状态
- ${green}11.${plain} 查看 x-ui 日志
+  ${green}8.${plain} 启动 x-ui
+  ${green}9.${plain} 停止 x-ui
+  ${green}10.${plain} 重启 x-ui
+  ${green}11.${plain} 查看 x-ui 状态
+  ${green}12.${plain} 查看 x-ui 日志
 ————————————————
- ${green}12.${plain} 设置 x-ui 开机自启
- ${green}13.${plain} 取消 x-ui 开机自启
+  ${green}13.${plain} 设置 x-ui 开机自启
+  ${green}14.${plain} 取消 x-ui 开机自启
 ————————————————
- ${green}14.${plain} 一键ACME申请证书
- ${green}15.${plain} 一键BBR+FQ加速
+  ${green}15.${plain} 一键ACME申请证书
+  ${green}16.${plain} 一键BBR+FQ加速
  "
     show_status
-    echo && read -p "请输入选择 [0-15]: " num
+    echo && read -p "请输入选择 [0-16]: " num
 
     case "${num}" in
                0) exit 0
@@ -474,7 +475,7 @@ show_menu() {
         ;;
         16) bbr
         ;;
-        *) echo -e "${red}请输入正确的数字 [0-15]${plain}"
+        *) echo -e "${red}请输入正确的数字 [0-16]${plain}"
         ;;
     esac
 }
