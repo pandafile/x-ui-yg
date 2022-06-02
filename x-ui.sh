@@ -348,6 +348,14 @@ check_install() {
         return 0
     fi
 }
+check_config() {
+    info=$(/usr/local/x-ui/x-ui setting -show true)
+    if [[ $? != 0 ]]; then
+        echo -e "get current settings error,please check logs"
+        show_menu
+    fi
+    green "${info}"
+}
 
 show_status() {
     check_status
