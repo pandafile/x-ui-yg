@@ -281,7 +281,7 @@ acme() {
 }
 
 bbr() {
-bash <(curl -L -s https://raw.githubusercontent.com/pandafile/across/master/bbr.sh)
+bash <(curl -L -s https://raw.githubusercontent.com/teddysun/across/master/bbr.sh)
     echo ""
     before_show_menu
 }
