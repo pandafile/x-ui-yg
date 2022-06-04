@@ -354,7 +354,7 @@ check_config() {
         echo -e "get current settings error,please check logs"
         show_menu
     fi
-    green "${info}"
+    "${info}"
 }
 
 show_status() {
